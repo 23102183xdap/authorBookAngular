@@ -1,0 +1,19 @@
+<p>test-component works!</p>
+hej med dig
+<!-- interpolation -->
+{{name}}
+<!-- if sætninger -->
+<button (click)="firstMethod()" >click me</button>
+<br>
+<br>
+<br>
+<br>
+<label *ngIf="false">this is a text</label>
+<label *ngIf="sand">this is a text</label>
+<button>{{name}}</button>
+<button>{{author.firstname}}</button>
+<!-- <div *ngFor="let objectname of arrayname">
+</div> -->
+<div *ngFor="let author of authors">
+<label>{{author.firstname}}</label>
+</div>
