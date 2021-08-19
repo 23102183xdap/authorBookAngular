@@ -7,12 +7,12 @@ import { AuthorService } from 'src/app/services/author.service';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
-
-  constructor(private http:AuthorService) { } //DI
+  // http : AuthorService
+  constructor(private http:AuthorService) { } //DI , every time I use a Service write it here
 
   ngOnInit(): void {
     console.log(
-      this.http.getAuthors());
+      this.http.getAuthorsHardcoded());
       // console.log(
       //   this.http.getAuthors());
   }
