@@ -1,4 +1,8 @@
 <p>author works!</p>
+<div>
+  <input type="text" name="authorSearch" id="" #authorSearch>
+  <button (click)="getAuthorById(authorSearch.value)">search Author</button>
+</div>
 
 <!--
 CRUD
@@ -8,3 +12,17 @@ author lastname <input type="text" name="" id="">
 
 searchByID <input type="text" name="" value="search string" id="">
 dropdown where all authors are placed - difficult!! -->
+
+<div *ngFor="let authorObj of authors">
+Firstname: <label for="">{{authorObj.firstname}}</label>
+<button type="button"(click)="deleteAuthor(authorObj.id)" >X</button>
+</div>
+
+
+<form [formGroup]="profileForm">
+<label for="">firstname</label> <input type="text" name="" formControlName="firstname" id="">
+<label for="">lastname</label> <input type="text" name="" formControlName="lastname" id="">
+<br>
+<!-- <button (click)="createAuthor(profileForm.value)">create</button> -->
+<button type="submit" (click)="createAuthor(profileForm.value)">OMG</button>
+</form>
