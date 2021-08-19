@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthorService } from 'src/app/services/author.service';
 
 @Component({
   selector: 'app-author',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:AuthorService) { } //DI
 
   ngOnInit(): void {
+    console.log(
+      this.http.getAuthors());
+      // console.log(
+      //   this.http.getAuthors());
   }
 
 }
