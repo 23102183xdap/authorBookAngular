@@ -78,4 +78,5 @@ export class AuthorComponent implements OnInit {
     return this.http.createAuthor(this.profileForm.value).subscribe(data => console.log(data));
 
   }
+  thisIsATest(){}
 }
